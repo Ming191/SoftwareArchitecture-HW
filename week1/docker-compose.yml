@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  desktop:
+    build: .
+    image: ubuntu-vnc
+    container_name: vnc-container
+    ports:
+      - "2222:22"
+      - "5901:5901"
+    shm_size: '2gb'
